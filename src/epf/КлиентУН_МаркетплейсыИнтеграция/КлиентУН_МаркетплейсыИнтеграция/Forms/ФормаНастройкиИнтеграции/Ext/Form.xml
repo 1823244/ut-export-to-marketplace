@@ -1,0 +1,2017 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.16">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Настройки</v8:content>
+		</v8:item>
+	</Title>
+	<AutoTitle>false</AutoTitle>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<ChildItems>
+			<Button name="ФормаФормаГлавная" id="119">
+				<Type>CommandBarHyperlink</Type>
+				<CommandName>Form.Command.ФормаГлавная</CommandName>
+				<ExtendedTooltip name="ФормаФормаГлавнаяРасширеннаяПодсказка" id="120"/>
+			</Button>
+			<Button name="ФормаФормаНастройкиИнтеграции" id="121">
+				<Type>CommandBarHyperlink</Type>
+				<Visible>false</Visible>
+				<CommandName>Form.Command.ФормаНастройкиИнтеграции</CommandName>
+				<ExtendedTooltip name="ФормаФормаНастройкиИнтеграцииРасширеннаяПодсказка" id="122"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="NotificationProcessing">ОбработкаОповещения</Event>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+		<Event name="FillCheckProcessingAtServer">ОбработкаПроверкиЗаполненияНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<CommandBar name="НастройкиКоманды" id="47">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настройки команды</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настройки команды</v8:content>
+				</v8:item>
+			</ToolTip>
+			<ExtendedTooltip name="НастройкиКомандыРасширеннаяПодсказка" id="48"/>
+			<ChildItems>
+				<Button name="ФормаСохранитьНастройки" id="20">
+					<Type>CommandBarButton</Type>
+					<CommandName>Form.Command.СохранитьНастройки</CommandName>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Сохранить</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="ФормаСохранитьНастройкиРасширеннаяПодсказка" id="21"/>
+				</Button>
+				<Button name="ФормаВосстановитьНастройки" id="22">
+					<Type>CommandBarButton</Type>
+					<CommandName>Form.Command.ВосстановитьНастройки</CommandName>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Восстановить</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="ФормаВосстановитьНастройкиРасширеннаяПодсказка" id="23"/>
+				</Button>
+				<Popup name="ГруппаОтладка" id="153">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Отладка</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа отладка</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ГруппаОтладкаРасширеннаяПодсказка" id="154"/>
+					<ChildItems>
+						<Button name="ОтладкаКомандыОбменаПоРегламенту" id="161">
+							<Type>CommandBarButton</Type>
+							<CommandName>Form.Command.ОтладкаКомандыОбменаПоРегламенту</CommandName>
+							<ExtendedTooltip name="ОтладкаКомандыОбменаПоРегламентуРасширеннаяПодсказка" id="162"/>
+						</Button>
+					</ChildItems>
+				</Popup>
+			</ChildItems>
+		</CommandBar>
+		<Pages name="ПанельНастроек" id="79">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Панель настроек</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Панель настроек</v8:content>
+				</v8:item>
+			</ToolTip>
+			<PagesRepresentation>TabsOnTop</PagesRepresentation>
+			<ExtendedTooltip name="ПанельНастроекРасширеннаяПодсказка" id="80"/>
+			<ChildItems>
+				<Page name="СтраницаПодключение" id="81">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Подключение</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Страница подключение</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="СтраницаПодключениеРасширеннаяПодсказка" id="82"/>
+					<ChildItems>
+						<InputField name="АдресСервисаИнтеграции" id="30">
+							<DataPath>АдресСервисаИнтеграции</DataPath>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Адрес без протокола, например, example.com</v8:content>
+								</v8:item>
+							</ToolTip>
+							<ToolTipRepresentation>Button</ToolTipRepresentation>
+							<ContextMenu name="АдресСервисаИнтеграцииКонтекстноеМеню" id="31"/>
+							<ExtendedTooltip name="АдресСервисаИнтеграцииРасширеннаяПодсказка" id="32"/>
+						</InputField>
+						<InputField name="РазмещениеAPIСервисаИнтеграции" id="165">
+							<DataPath>РазмещениеAPIСервисаИнтеграции</DataPath>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>По факту это имя БД, в которой зарегистрирован сервис на веб-сервере. Например, для адреса "http://localhost/un_test/hs/mp_int/v1/exchange/prices" это "un_test"</v8:content>
+								</v8:item>
+							</ToolTip>
+							<ToolTipRepresentation>Button</ToolTipRepresentation>
+							<ContextMenu name="РазмещениеAPIСервисаИнтеграцииКонтекстноеМеню" id="166"/>
+							<ExtendedTooltip name="РазмещениеAPIСервисаИнтеграцииРасширеннаяПодсказка" id="167"/>
+						</InputField>
+						<CheckBoxField name="ЗащищенноеСоединениеСервисаИнтеграции" id="136">
+							<DataPath>ЗащищенноеСоединениеСервисаИнтеграции</DataPath>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Признак использования HTTPS</v8:content>
+								</v8:item>
+							</ToolTip>
+							<ToolTipRepresentation>Button</ToolTipRepresentation>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ЗащищенноеСоединениеСервисаИнтеграцииКонтекстноеМеню" id="137"/>
+							<ExtendedTooltip name="ЗащищенноеСоединениеСервисаИнтеграцииРасширеннаяПодсказка" id="138"/>
+						</CheckBoxField>
+						<InputField name="ПортСервисаИнтеграции" id="33">
+							<DataPath>ПортСервисаИнтеграции</DataPath>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Если не указан, используется 80 для http и 443 для https по умолчанию</v8:content>
+								</v8:item>
+							</ToolTip>
+							<ToolTipRepresentation>Button</ToolTipRepresentation>
+							<ContextMenu name="ПортСервисаИнтеграцииКонтекстноеМеню" id="34"/>
+							<ExtendedTooltip name="ПортСервисаИнтеграцииРасширеннаяПодсказка" id="35"/>
+						</InputField>
+						<InputField name="ТаймаутСервисаИнтеграции" id="36">
+							<DataPath>ТаймаутСервисаИнтеграции</DataPath>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Таймаут соединения и выполнения удаленного запроса в секундах</v8:content>
+								</v8:item>
+							</ToolTip>
+							<ToolTipRepresentation>Button</ToolTipRepresentation>
+							<ContextMenu name="ТаймаутСервисаИнтеграцииКонтекстноеМеню" id="37"/>
+							<ExtendedTooltip name="ТаймаутСервисаИнтеграцииРасширеннаяПодсказка" id="38"/>
+						</InputField>
+						<InputField name="ПользовательСервисаИнтеграции" id="83">
+							<DataPath>ПользовательСервисаИнтеграции</DataPath>
+							<ContextMenu name="ПользовательСервисаИнтеграцииКонтекстноеМеню" id="84"/>
+							<ExtendedTooltip name="ПользовательСервисаИнтеграцииРасширеннаяПодсказка" id="85"/>
+						</InputField>
+						<InputField name="ПарольСервисаИнтеграции" id="86">
+							<DataPath>ПарольСервисаИнтеграции</DataPath>
+							<PasswordMode>true</PasswordMode>
+							<ContextMenu name="ПарольСервисаИнтеграцииКонтекстноеМеню" id="87"/>
+							<ExtendedTooltip name="ПарольСервисаИнтеграцииРасширеннаяПодсказка" id="88"/>
+						</InputField>
+					</ChildItems>
+				</Page>
+				<Page name="СтраницаКлючиAPI" id="92">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Ключи API</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Страница ключи API</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="СтраницаКлючиAPIРасширеннаяПодсказка" id="93"/>
+					<ChildItems>
+						<Table name="КлючиAPI" id="94">
+							<Representation>List</Representation>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<DataPath>КлючиAPI</DataPath>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Ключи API используются для идентификации владельца на стороне сервиса</v8:content>
+								</v8:item>
+							</ToolTip>
+							<ToolTipRepresentation>ShowTop</ToolTipRepresentation>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="КлючиAPIКонтекстноеМеню" id="95"/>
+							<AutoCommandBar name="КлючиAPIКоманднаяПанель" id="96"/>
+							<ExtendedTooltip name="КлючиAPIРасширеннаяПодсказка" id="97"/>
+							<SearchStringAddition name="КлючиAPIСтрокаПоиска" id="98">
+								<AdditionSource>
+									<Item>КлючиAPI</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="КлючиAPIСтрокаПоискаКонтекстноеМеню" id="99"/>
+								<ExtendedTooltip name="КлючиAPIСтрокаПоискаРасширеннаяПодсказка" id="100"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="КлючиAPIСостояниеПросмотра" id="101">
+								<AdditionSource>
+									<Item>КлючиAPI</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="КлючиAPIСостояниеПросмотраКонтекстноеМеню" id="102"/>
+								<ExtendedTooltip name="КлючиAPIСостояниеПросмотраРасширеннаяПодсказка" id="103"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="КлючиAPIУправлениеПоиском" id="104">
+								<AdditionSource>
+									<Item>КлючиAPI</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="КлючиAPIУправлениеПоискомКонтекстноеМеню" id="105"/>
+								<ExtendedTooltip name="КлючиAPIУправлениеПоискомРасширеннаяПодсказка" id="106"/>
+							</SearchControlAddition>
+							<Events>
+								<Event name="OnEditEnd">КлючиAPIПриОкончанииРедактирования</Event>
+								<Event name="OnChange">КлючиAPIПриИзменении</Event>
+							</Events>
+							<ChildItems>
+								<InputField name="КлючиAPIКлючAPI" id="113">
+									<DataPath>КлючиAPI.КлючAPI</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="КлючиAPIКлючAPIКонтекстноеМеню" id="114"/>
+									<ExtendedTooltip name="КлючиAPIКлючAPIРасширеннаяПодсказка" id="115"/>
+								</InputField>
+								<InputField name="КлючиAPIВладелец" id="123">
+									<DataPath>КлючиAPI.Владелец</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="КлючиAPIВладелецКонтекстноеМеню" id="124"/>
+									<ExtendedTooltip name="КлючиAPIВладелецРасширеннаяПодсказка" id="125"/>
+								</InputField>
+								<InputField name="КлючиAPIОписание" id="126">
+									<DataPath>КлючиAPI.Описание</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="КлючиAPIОписаниеКонтекстноеМеню" id="127"/>
+									<ExtendedTooltip name="КлючиAPIОписаниеРасширеннаяПодсказка" id="128"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+				<Page name="СтраницаОбменДанными" id="49">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Обмен данными</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Страница обмен данными</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>AlwaysHorizontal</Group>
+					<ExtendedTooltip name="СтраницаОбменДаннымиРасширеннаяПодсказка" id="50"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаОбменДаннымиСписок" id="132">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа обмен данными список</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа обмен данными список</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Vertical</Group>
+							<Behavior>Usual</Behavior>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаОбменДаннымиСписокРасширеннаяПодсказка" id="133"/>
+							<ChildItems>
+								<Table name="НастройкиОбмена" id="51">
+									<Representation>List</Representation>
+									<EnableStartDrag>true</EnableStartDrag>
+									<EnableDrag>true</EnableDrag>
+									<DataPath>НастройкиОбмена</DataPath>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Команды обмена вызываются только включенные и в указанном порядке при выполнении одноименных регл. заданий по расписанию</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ToolTipRepresentation>ShowTop</ToolTipRepresentation>
+									<RowFilter xsi:nil="true"/>
+									<ContextMenu name="НастройкиОбменаКонтекстноеМеню" id="52"/>
+									<AutoCommandBar name="НастройкиОбменаКоманднаяПанель" id="53">
+										<ChildItems>
+											<Button name="НастройкиОбменаВыполнитьКомандуОбмена" id="151">
+												<Type>CommandBarButton</Type>
+												<CommandName>Form.Command.ВыполнитьКомандуОбмена</CommandName>
+												<ExtendedTooltip name="НастройкиОбменаВыполнитьКомандуОбменаРасширеннаяПодсказка" id="152"/>
+											</Button>
+										</ChildItems>
+									</AutoCommandBar>
+									<ExtendedTooltip name="НастройкиОбменаРасширеннаяПодсказка" id="54"/>
+									<SearchStringAddition name="НастройкиОбменаСтрокаПоиска" id="55">
+										<AdditionSource>
+											<Item>НастройкиОбмена</Item>
+											<Type>SearchStringRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="НастройкиОбменаСтрокаПоискаКонтекстноеМеню" id="56"/>
+										<ExtendedTooltip name="НастройкиОбменаСтрокаПоискаРасширеннаяПодсказка" id="57"/>
+									</SearchStringAddition>
+									<ViewStatusAddition name="НастройкиОбменаСостояниеПросмотра" id="58">
+										<AdditionSource>
+											<Item>НастройкиОбмена</Item>
+											<Type>ViewStatusRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="НастройкиОбменаСостояниеПросмотраКонтекстноеМеню" id="59"/>
+										<ExtendedTooltip name="НастройкиОбменаСостояниеПросмотраРасширеннаяПодсказка" id="60"/>
+									</ViewStatusAddition>
+									<SearchControlAddition name="НастройкиОбменаУправлениеПоиском" id="61">
+										<AdditionSource>
+											<Item>НастройкиОбмена</Item>
+											<Type>SearchControl</Type>
+										</AdditionSource>
+										<ContextMenu name="НастройкиОбменаУправлениеПоискомКонтекстноеМеню" id="62"/>
+										<ExtendedTooltip name="НастройкиОбменаУправлениеПоискомРасширеннаяПодсказка" id="63"/>
+									</SearchControlAddition>
+									<Events>
+										<Event name="OnEditEnd">НастройкиОбменаПриОкончанииРедактирования</Event>
+										<Event name="OnActivateRow">НастройкиОбменаПриАктивизацииСтроки</Event>
+										<Event name="OnStartEdit">НастройкиОбменаПриНачалеРедактирования</Event>
+									</Events>
+									<ChildItems>
+										<CheckBoxField name="НастройкиОбменаИспользование" id="76">
+											<DataPath>НастройкиОбмена.Использование</DataPath>
+											<TitleLocation>None</TitleLocation>
+											<EditMode>EnterOnInput</EditMode>
+											<CheckBoxType>Auto</CheckBoxType>
+											<ContextMenu name="НастройкиОбменаИспользованиеКонтекстноеМеню" id="77"/>
+											<ExtendedTooltip name="НастройкиОбменаИспользованиеРасширеннаяПодсказка" id="78"/>
+										</CheckBoxField>
+										<InputField name="НастройкиОбменаКомандаОбменаПредставление" id="129">
+											<DataPath>НастройкиОбмена.КомандаОбменаПредставление</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<Width>20</Width>
+											<DropListButton>true</DropListButton>
+											<ContextMenu name="НастройкиОбменаКомандаОбменаПредставлениеКонтекстноеМеню" id="130"/>
+											<ExtendedTooltip name="НастройкиОбменаКомандаОбменаПредставлениеРасширеннаяПодсказка" id="131"/>
+											<Events>
+												<Event name="AutoComplete">НастройкиОбменаКомандаОбменаПредставлениеАвтоПодбор</Event>
+												<Event name="Clearing">НастройкиОбменаКомандаОбменаПредставлениеОчистка</Event>
+												<Event name="ChoiceProcessing">НастройкиОбменаКомандаОбменаПредставлениеОбработкаВыбора</Event>
+											</Events>
+										</InputField>
+										<InputField name="НастройкиОбменаКлючПредставление" id="116">
+											<DataPath>НастройкиОбмена.КлючПредставление</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<DropListButton>true</DropListButton>
+											<ChoiceButton>false</ChoiceButton>
+											<TextEdit>false</TextEdit>
+											<ContextMenu name="НастройкиОбменаКлючПредставлениеКонтекстноеМеню" id="117"/>
+											<ExtendedTooltip name="НастройкиОбменаКлючПредставлениеРасширеннаяПодсказка" id="118"/>
+											<Events>
+												<Event name="AutoComplete">НастройкиОбменаКлючПредставлениеАвтоПодбор</Event>
+												<Event name="Clearing">НастройкиОбменаКлючПредставлениеОчистка</Event>
+												<Event name="ChoiceProcessing">НастройкиОбменаКлючПредставлениеОбработкаВыбора</Event>
+											</Events>
+										</InputField>
+										<InputField name="НастройкиОбменаВерсияAPI" id="70">
+											<DataPath>НастройкиОбмена.ВерсияAPI</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<Mask>99</Mask>
+											<ContextMenu name="НастройкиОбменаВерсияAPIКонтекстноеМеню" id="71"/>
+											<ExtendedTooltip name="НастройкиОбменаВерсияAPIРасширеннаяПодсказка" id="72"/>
+										</InputField>
+									</ChildItems>
+								</Table>
+								<InputField name="НастройкиОбменаОписание" id="89">
+									<DataPath>Items.НастройкиОбмена.CurrentData.Описание</DataPath>
+									<TitleLocation>Top</TitleLocation>
+									<EditMode>EnterOnInput</EditMode>
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<VerticalStretch>true</VerticalStretch>
+									<MultiLine>true</MultiLine>
+									<ExtendedEdit>true</ExtendedEdit>
+									<ContextMenu name="НастройкиОбменаОписаниеКонтекстноеМеню" id="90"/>
+									<ExtendedTooltip name="НастройкиОбменаОписаниеРасширеннаяПодсказка" id="91"/>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаОбменДаннымиПараметры" id="134">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Параметры</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа обмен данными параметры</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Vertical</Group>
+							<Behavior>Collapsible</Behavior>
+							<Collapsed>true</Collapsed>
+							<ControlRepresentation>Picture</ControlRepresentation>
+							<Representation>None</Representation>
+							<AssociatedTableElementId xsi:type="xs:string">ПараметрыОбмена</AssociatedTableElementId>
+							<ExtendedTooltip name="ГруппаОбменДаннымиПараметрыРасширеннаяПодсказка" id="135"/>
+							<ChildItems>
+								<Table name="ПараметрыОбмена" id="168">
+									<Representation>List</Representation>
+									<CommandBarLocation>None</CommandBarLocation>
+									<ChangeRowOrder>false</ChangeRowOrder>
+									<SelectionMode>SingleRow</SelectionMode>
+									<EnableStartDrag>true</EnableStartDrag>
+									<EnableDrag>true</EnableDrag>
+									<DataPath>ПараметрыОбмена</DataPath>
+									<CommandSet>
+										<ExcludedCommand>Add</ExcludedCommand>
+										<ExcludedCommand>CancelSearch</ExcludedCommand>
+										<ExcludedCommand>Change</ExcludedCommand>
+										<ExcludedCommand>Copy</ExcludedCommand>
+										<ExcludedCommand>EndEdit</ExcludedCommand>
+										<ExcludedCommand>Find</ExcludedCommand>
+										<ExcludedCommand>FindByCurrentValue</ExcludedCommand>
+										<ExcludedCommand>MoveDown</ExcludedCommand>
+										<ExcludedCommand>MoveUp</ExcludedCommand>
+										<ExcludedCommand>SearchEverywhere</ExcludedCommand>
+										<ExcludedCommand>ShowRowRearrangement</ExcludedCommand>
+										<ExcludedCommand>SortListAsc</ExcludedCommand>
+										<ExcludedCommand>SortListDesc</ExcludedCommand>
+									</CommandSet>
+									<SearchStringLocation>None</SearchStringLocation>
+									<ViewStatusLocation>None</ViewStatusLocation>
+									<SearchControlLocation>None</SearchControlLocation>
+									<RowFilter xsi:nil="true"/>
+									<ContextMenu name="ПараметрыОбменаКонтекстноеМеню" id="169"/>
+									<AutoCommandBar name="ПараметрыОбменаКоманднаяПанель" id="170"/>
+									<ExtendedTooltip name="ПараметрыОбменаРасширеннаяПодсказка" id="171"/>
+									<SearchStringAddition name="ПараметрыОбменаСтрокаПоиска" id="172">
+										<AdditionSource>
+											<Item>ПараметрыОбмена</Item>
+											<Type>SearchStringRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="ПараметрыОбменаСтрокаПоискаКонтекстноеМеню" id="173"/>
+										<ExtendedTooltip name="ПараметрыОбменаСтрокаПоискаРасширеннаяПодсказка" id="174"/>
+									</SearchStringAddition>
+									<ViewStatusAddition name="ПараметрыОбменаСостояниеПросмотра" id="175">
+										<AdditionSource>
+											<Item>ПараметрыОбмена</Item>
+											<Type>ViewStatusRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="ПараметрыОбменаСостояниеПросмотраКонтекстноеМеню" id="176"/>
+										<ExtendedTooltip name="ПараметрыОбменаСостояниеПросмотраРасширеннаяПодсказка" id="177"/>
+									</ViewStatusAddition>
+									<SearchControlAddition name="ПараметрыОбменаУправлениеПоиском" id="178">
+										<AdditionSource>
+											<Item>ПараметрыОбмена</Item>
+											<Type>SearchControl</Type>
+										</AdditionSource>
+										<ContextMenu name="ПараметрыОбменаУправлениеПоискомКонтекстноеМеню" id="179"/>
+										<ExtendedTooltip name="ПараметрыОбменаУправлениеПоискомРасширеннаяПодсказка" id="180"/>
+									</SearchControlAddition>
+									<Events>
+										<Event name="BeforeAddRow">ПараметрыОбменаПередНачаломДобавления</Event>
+										<Event name="BeforeDeleteRow">ПараметрыОбменаПередУдалением</Event>
+										<Event name="OnActivateRow">ПараметрыОбменаПриАктивизацииСтроки</Event>
+										<Event name="OnStartEdit">ПараметрыОбменаПриНачалеРедактирования</Event>
+									</Events>
+									<ChildItems>
+										<InputField name="ПараметрыОбменаИмя" id="184">
+											<DataPath>ПараметрыОбмена.Имя</DataPath>
+											<ReadOnly>true</ReadOnly>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ПараметрыОбменаИмяКонтекстноеМеню" id="185"/>
+											<ExtendedTooltip name="ПараметрыОбменаИмяРасширеннаяПодсказка" id="186"/>
+										</InputField>
+										<InputField name="ПараметрыОбменаЗначение" id="187">
+											<DataPath>ПараметрыОбмена.Значение</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ChooseType>false</ChooseType>
+											<ContextMenu name="ПараметрыОбменаЗначениеКонтекстноеМеню" id="188"/>
+											<ExtendedTooltip name="ПараметрыОбменаЗначениеРасширеннаяПодсказка" id="189"/>
+										</InputField>
+									</ChildItems>
+								</Table>
+								<InputField name="ПараметрыОбменаОписание" id="190">
+									<DataPath>Items.ПараметрыОбмена.CurrentData.Описание</DataPath>
+									<MultiLine>true</MultiLine>
+									<ExtendedEdit>true</ExtendedEdit>
+									<TextEdit>false</TextEdit>
+									<ContextMenu name="ПараметрыОбменаОписаниеКонтекстноеМеню" id="191"/>
+									<ExtendedTooltip name="ПараметрыОбменаОписаниеРасширеннаяПодсказка" id="192"/>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</Page>
+				<Page name="СтраницаМаркетплейсы" id="196">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Маркетплейсы</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Страница маркетплейсы</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>AlwaysHorizontal</Group>
+					<ExtendedTooltip name="СтраницаМаркетплейсыРасширеннаяПодсказка" id="197"/>
+					<ChildItems>
+						<Table name="Маркетплейсы" id="198">
+							<Representation>List</Representation>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<DataPath>НастройкиМаркетплейсов</DataPath>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="МаркетплейсыКонтекстноеМеню" id="199"/>
+							<AutoCommandBar name="МаркетплейсыКоманднаяПанель" id="200"/>
+							<ExtendedTooltip name="МаркетплейсыРасширеннаяПодсказка" id="201"/>
+							<SearchStringAddition name="МаркетплейсыСтрокаПоиска" id="202">
+								<AdditionSource>
+									<Item>Маркетплейсы</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="МаркетплейсыСтрокаПоискаКонтекстноеМеню" id="203"/>
+								<ExtendedTooltip name="МаркетплейсыСтрокаПоискаРасширеннаяПодсказка" id="204"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="МаркетплейсыСостояниеПросмотра" id="205">
+								<AdditionSource>
+									<Item>Маркетплейсы</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="МаркетплейсыСостояниеПросмотраКонтекстноеМеню" id="206"/>
+								<ExtendedTooltip name="МаркетплейсыСостояниеПросмотраРасширеннаяПодсказка" id="207"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="МаркетплейсыУправлениеПоиском" id="208">
+								<AdditionSource>
+									<Item>Маркетплейсы</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="МаркетплейсыУправлениеПоискомКонтекстноеМеню" id="209"/>
+								<ExtendedTooltip name="МаркетплейсыУправлениеПоискомРасширеннаяПодсказка" id="210"/>
+							</SearchControlAddition>
+							<Events>
+								<Event name="OnActivateRow">МаркетплейсыПриАктивизацииСтроки</Event>
+							</Events>
+							<ChildItems>
+								<CheckBoxField name="МаркетплейсыИспользование" id="217">
+									<DataPath>НастройкиМаркетплейсов.Использование</DataPath>
+									<TitleLocation>None</TitleLocation>
+									<EditMode>EnterOnInput</EditMode>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="МаркетплейсыИспользованиеКонтекстноеМеню" id="218"/>
+									<ExtendedTooltip name="МаркетплейсыИспользованиеРасширеннаяПодсказка" id="219"/>
+								</CheckBoxField>
+								<InputField name="МаркетплейсыОрганизация" id="220">
+									<DataPath>НастройкиМаркетплейсов.Организация</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="МаркетплейсыОрганизацияКонтекстноеМеню" id="221"/>
+									<ExtendedTooltip name="МаркетплейсыОрганизацияРасширеннаяПодсказка" id="222"/>
+								</InputField>
+								<InputField name="МаркетплейсыИмя" id="214">
+									<DataPath>НастройкиМаркетплейсов.Имя</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ListChoiceMode>true</ListChoiceMode>
+									<ChooseType>false</ChooseType>
+									<TextEdit>false</TextEdit>
+									<ContextMenu name="МаркетплейсыИмяКонтекстноеМеню" id="215"/>
+									<ExtendedTooltip name="МаркетплейсыИмяРасширеннаяПодсказка" id="216"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+						<Pages name="ПанельПоляСтрокиМаркетплейса" id="263">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Панель поля строки маркетплейса</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Панель поля строки маркетплейса</v8:content>
+								</v8:item>
+							</ToolTip>
+							<PagesRepresentation>TabsOnTop</PagesRepresentation>
+							<ExtendedTooltip name="ПанельПоляСтрокиМаркетплейсаРасширеннаяПодсказка" id="264"/>
+							<ChildItems>
+								<Page name="СтраницаМаркетплейсОбщее" id="269">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Общее</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Страница маркетплейс общее</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ExtendedTooltip name="СтраницаМаркетплейсОбщееРасширеннаяПодсказка" id="270"/>
+									<ChildItems>
+										<CheckBoxField name="МаркетплейсыИспользование1" id="298">
+											<DataPath>Items.Маркетплейсы.CurrentData.Использование</DataPath>
+											<TitleLocation>Right</TitleLocation>
+											<CheckBoxType>Auto</CheckBoxType>
+											<ContextMenu name="МаркетплейсыИспользование1КонтекстноеМеню" id="299"/>
+											<ExtendedTooltip name="МаркетплейсыИспользование1РасширеннаяПодсказка" id="300"/>
+										</CheckBoxField>
+										<CheckBoxField name="МаркетплейсыТестовыйРежим" id="304">
+											<DataPath>Items.Маркетплейсы.CurrentData.ТестовыйРежим</DataPath>
+											<TitleLocation>Right</TitleLocation>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>В этом режиме в форме отгрузки будет отображаться красная надпись с предупреждением</v8:content>
+												</v8:item>
+											</ToolTip>
+											<ToolTipRepresentation>Button</ToolTipRepresentation>
+											<CheckBoxType>Auto</CheckBoxType>
+											<ContextMenu name="МаркетплейсыТестовыйРежимКонтекстноеМеню" id="305"/>
+											<ExtendedTooltip name="МаркетплейсыТестовыйРежимРасширеннаяПодсказка" id="306"/>
+										</CheckBoxField>
+										<InputField name="МаркетплейсыКонтрагент" id="271">
+											<DataPath>Items.Маркетплейсы.CurrentData.Контрагент</DataPath>
+											<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+											<ContextMenu name="МаркетплейсыКонтрагентКонтекстноеМеню" id="272"/>
+											<ExtendedTooltip name="МаркетплейсыКонтрагентРасширеннаяПодсказка" id="273"/>
+										</InputField>
+										<InputField name="МаркетплейсыСклад" id="310">
+											<DataPath>Items.Маркетплейсы.CurrentData.Склад</DataPath>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Для схемы отгрузки через заказы на перемещение!</v8:content>
+												</v8:item>
+											</ToolTip>
+											<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+											<ContextMenu name="МаркетплейсыСкладКонтекстноеМеню" id="311"/>
+											<ExtendedTooltip name="МаркетплейсыСкладРасширеннаяПодсказка" id="312"/>
+										</InputField>
+										<InputField name="МаркетплейсыКомандыОбмена" id="307">
+											<DataPath>Items.Маркетплейсы.CurrentData.КомандыОбмена</DataPath>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Список механизмов обмена включённых для этого маркетплейса</v8:content>
+												</v8:item>
+											</ToolTip>
+											<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+											<ContextMenu name="МаркетплейсыКомандыОбменаКонтекстноеМеню" id="308"/>
+											<ExtendedTooltip name="МаркетплейсыКомандыОбменаРасширеннаяПодсказка" id="309"/>
+										</InputField>
+									</ChildItems>
+								</Page>
+								<Page name="СтраницаМаркетплейсОтгрузка" id="265">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Отгрузка</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Страница маркетплейс отгрузка</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ExtendedTooltip name="СтраницаМаркетплейсОтгрузкаРасширеннаяПодсказка" id="266"/>
+									<ChildItems>
+										<CheckBoxField name="МаркетплейсыИспользоватьПоставки" id="301">
+											<DataPath>Items.Маркетплейсы.CurrentData.ИспользоватьПоставки</DataPath>
+											<TitleLocation>Right</TitleLocation>
+											<CheckBoxType>Auto</CheckBoxType>
+											<ContextMenu name="МаркетплейсыИспользоватьПоставкиКонтекстноеМеню" id="302"/>
+											<ExtendedTooltip name="МаркетплейсыИспользоватьПоставкиРасширеннаяПодсказка" id="303"/>
+										</CheckBoxField>
+										<CheckBoxField name="МаркетплейсыИспользоватьОтправления" id="274">
+											<DataPath>Items.Маркетплейсы.CurrentData.ИспользоватьОтправления</DataPath>
+											<TitleLocation>Right</TitleLocation>
+											<CheckBoxType>Auto</CheckBoxType>
+											<ContextMenu name="МаркетплейсыИспользоватьОтправленияКонтекстноеМеню" id="275"/>
+											<ExtendedTooltip name="МаркетплейсыИспользоватьОтправленияРасширеннаяПодсказка" id="276"/>
+										</CheckBoxField>
+										<InputField name="МаркетплейсыШаблонЭтикеткиШтрихкода" id="277">
+											<DataPath>Items.Маркетплейсы.CurrentData.ШаблонЭтикеткиШтрихкода</DataPath>
+											<ContextMenu name="МаркетплейсыШаблонЭтикеткиШтрихкодаКонтекстноеМеню" id="278"/>
+											<ExtendedTooltip name="МаркетплейсыШаблонЭтикеткиШтрихкодаРасширеннаяПодсказка" id="279"/>
+										</InputField>
+										<InputField name="МаркетплейсыШаблонЭтикеткиМаркетплейса" id="280">
+											<DataPath>Items.Маркетплейсы.CurrentData.ШаблонЭтикеткиМаркетплейса</DataPath>
+											<ContextMenu name="МаркетплейсыШаблонЭтикеткиМаркетплейсаКонтекстноеМеню" id="281"/>
+											<ExtendedTooltip name="МаркетплейсыШаблонЭтикеткиМаркетплейсаРасширеннаяПодсказка" id="282"/>
+										</InputField>
+										<InputField name="МаркетплейсыКаталогЭтикеток" id="283">
+											<DataPath>Items.Маркетплейсы.CurrentData.КаталогЭтикеток</DataPath>
+											<ContextMenu name="МаркетплейсыКаталогЭтикетокКонтекстноеМеню" id="284"/>
+											<ExtendedTooltip name="МаркетплейсыКаталогЭтикетокРасширеннаяПодсказка" id="285"/>
+										</InputField>
+										<InputField name="МаркетплейсыТипФайлаЭтикетки" id="286">
+											<DataPath>Items.Маркетплейсы.CurrentData.ТипФайлаЭтикетки</DataPath>
+											<ContextMenu name="МаркетплейсыТипФайлаЭтикеткиКонтекстноеМеню" id="287"/>
+											<ExtendedTooltip name="МаркетплейсыТипФайлаЭтикеткиРасширеннаяПодсказка" id="288"/>
+										</InputField>
+									</ChildItems>
+								</Page>
+								<Page name="СтраницаМаркетплейсДоставка" id="267">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Доставка</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Страница маркетплейс доставка</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ExtendedTooltip name="СтраницаМаркетплейсДоставкаРасширеннаяПодсказка" id="268"/>
+									<ChildItems>
+										<InputField name="МаркетплейсыСпособДоставки" id="289">
+											<DataPath>Items.Маркетплейсы.CurrentData.СпособДоставки</DataPath>
+											<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+											<ListChoiceMode>true</ListChoiceMode>
+											<ChooseType>false</ChooseType>
+											<ChoiceList>
+												<xr:Item>
+													<xr:Presentation/>
+													<xr:CheckState>0</xr:CheckState>
+													<xr:Value xsi:type="FormChoiceListDesTimeValue">
+														<Presentation>
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>Самовывоз (с нашего склада) = Самовывоз</v8:content>
+															</v8:item>
+														</Presentation>
+														<Value xsi:type="xr:DesignTimeRef">7b29736a-14f3-417e-99b5-882e5e01bc78.f442a653-b32b-4be9-9b5e-4a5abb206d85</Value>
+													</xr:Value>
+												</xr:Item>
+												<xr:Item>
+													<xr:Presentation/>
+													<xr:CheckState>0</xr:CheckState>
+													<xr:Value xsi:type="FormChoiceListDesTimeValue">
+														<Presentation>
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>Наша транспортная служба до клиента = ДоКлиента</v8:content>
+															</v8:item>
+														</Presentation>
+														<Value xsi:type="xr:DesignTimeRef">7b29736a-14f3-417e-99b5-882e5e01bc78.3c09e30d-ef7d-4e10-9b7e-c3d470857e36</Value>
+													</xr:Value>
+												</xr:Item>
+												<xr:Item>
+													<xr:Presentation/>
+													<xr:CheckState>0</xr:CheckState>
+													<xr:Value xsi:type="FormChoiceListDesTimeValue">
+														<Presentation>
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>Наша транспортная служба до перевозчика = СиламиПеревозчикаПоАдресу</v8:content>
+															</v8:item>
+														</Presentation>
+														<Value xsi:type="xr:DesignTimeRef">7b29736a-14f3-417e-99b5-882e5e01bc78.066e8fb0-3813-4481-b4bf-edfafab4aed9</Value>
+													</xr:Value>
+												</xr:Item>
+												<xr:Item>
+													<xr:Presentation/>
+													<xr:CheckState>0</xr:CheckState>
+													<xr:Value xsi:type="FormChoiceListDesTimeValue">
+														<Presentation>
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>Перевозчик (с нашего склада) = СиламиПеревозчика</v8:content>
+															</v8:item>
+														</Presentation>
+														<Value xsi:type="xr:DesignTimeRef">7b29736a-14f3-417e-99b5-882e5e01bc78.b983ffd7-6fee-4341-823c-bc970e783c64</Value>
+													</xr:Value>
+												</xr:Item>
+												<xr:Item>
+													<xr:Presentation/>
+													<xr:CheckState>0</xr:CheckState>
+													<xr:Value xsi:type="FormChoiceListDesTimeValue">
+														<Presentation>
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>На усмотрение транспортной службы = КПолучателюОпределяетСлужбаДоставки</v8:content>
+															</v8:item>
+														</Presentation>
+														<Value xsi:type="xr:DesignTimeRef">7b29736a-14f3-417e-99b5-882e5e01bc78.c07693f6-6c15-46b9-8ea5-6560cf995152</Value>
+													</xr:Value>
+												</xr:Item>
+											</ChoiceList>
+											<ContextMenu name="МаркетплейсыСпособДоставкиКонтекстноеМеню" id="290"/>
+											<ExtendedTooltip name="МаркетплейсыСпособДоставкиРасширеннаяПодсказка" id="291"/>
+										</InputField>
+										<InputField name="МаркетплейсыАдресДоставки" id="292">
+											<DataPath>Items.Маркетплейсы.CurrentData.АдресДоставки</DataPath>
+											<ContextMenu name="МаркетплейсыАдресДоставкиКонтекстноеМеню" id="293"/>
+											<ExtendedTooltip name="МаркетплейсыАдресДоставкиРасширеннаяПодсказка" id="294"/>
+										</InputField>
+										<InputField name="МаркетплейсыЗонаДоставки" id="295">
+											<DataPath>Items.Маркетплейсы.CurrentData.ЗонаДоставки</DataPath>
+											<ContextMenu name="МаркетплейсыЗонаДоставкиКонтекстноеМеню" id="296"/>
+											<ExtendedTooltip name="МаркетплейсыЗонаДоставкиРасширеннаяПодсказка" id="297"/>
+										</InputField>
+									</ChildItems>
+								</Page>
+								<Page name="СтраницаМаркетплейсДоставкаТаблица" id="313">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Доставка</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Страница маркетплейс доставка таблица</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ExtendedTooltip name="СтраницаМаркетплейсДоставкаТаблицаРасширеннаяПодсказка" id="314"/>
+									<ChildItems>
+										<Table name="НастройкиДоставкиМаркетплейсов" id="315">
+											<Representation>List</Representation>
+											<AutoInsertNewRow>true</AutoInsertNewRow>
+											<EnableStartDrag>true</EnableStartDrag>
+											<EnableDrag>true</EnableDrag>
+											<DataPath>НастройкиДоставкиМаркетплейсов</DataPath>
+											<RowFilter xsi:nil="true"/>
+											<ContextMenu name="НастройкиДоставкиМаркетплейсовКонтекстноеМеню" id="316"/>
+											<AutoCommandBar name="НастройкиДоставкиМаркетплейсовКоманднаяПанель" id="317"/>
+											<ExtendedTooltip name="НастройкиДоставкиМаркетплейсовРасширеннаяПодсказка" id="318"/>
+											<SearchStringAddition name="НастройкиДоставкиМаркетплейсовСтрокаПоиска" id="319">
+												<AdditionSource>
+													<Item>НастройкиДоставкиМаркетплейсов</Item>
+													<Type>SearchStringRepresentation</Type>
+												</AdditionSource>
+												<ContextMenu name="НастройкиДоставкиМаркетплейсовСтрокаПоискаКонтекстноеМеню" id="320"/>
+												<ExtendedTooltip name="НастройкиДоставкиМаркетплейсовСтрокаПоискаРасширеннаяПодсказка" id="321"/>
+											</SearchStringAddition>
+											<ViewStatusAddition name="НастройкиДоставкиМаркетплейсовСостояниеПросмотра" id="322">
+												<AdditionSource>
+													<Item>НастройкиДоставкиМаркетплейсов</Item>
+													<Type>ViewStatusRepresentation</Type>
+												</AdditionSource>
+												<ContextMenu name="НастройкиДоставкиМаркетплейсовСостояниеПросмотраКонтекстноеМеню" id="323"/>
+												<ExtendedTooltip name="НастройкиДоставкиМаркетплейсовСостояниеПросмотраРасширеннаяПодсказка" id="324"/>
+											</ViewStatusAddition>
+											<SearchControlAddition name="НастройкиДоставкиМаркетплейсовУправлениеПоиском" id="325">
+												<AdditionSource>
+													<Item>НастройкиДоставкиМаркетплейсов</Item>
+													<Type>SearchControl</Type>
+												</AdditionSource>
+												<ContextMenu name="НастройкиДоставкиМаркетплейсовУправлениеПоискомКонтекстноеМеню" id="326"/>
+												<ExtendedTooltip name="НастройкиДоставкиМаркетплейсовУправлениеПоискомРасширеннаяПодсказка" id="327"/>
+											</SearchControlAddition>
+											<Events>
+												<Event name="OnStartEdit">НастройкиДоставкиМаркетплейсовПриНачалеРедактирования</Event>
+											</Events>
+											<ChildItems>
+												<CheckBoxField name="НастройкиДоставкиМаркетплейсовИспользование" id="331">
+													<DataPath>НастройкиДоставкиМаркетплейсов.Использование</DataPath>
+													<TitleLocation>None</TitleLocation>
+													<EditMode>EnterOnInput</EditMode>
+													<CheckBoxType>Auto</CheckBoxType>
+													<ContextMenu name="НастройкиДоставкиМаркетплейсовИспользованиеКонтекстноеМеню" id="332"/>
+													<ExtendedTooltip name="НастройкиДоставкиМаркетплейсовИспользованиеРасширеннаяПодсказка" id="333"/>
+												</CheckBoxField>
+												<InputField name="НастройкиДоставкиМаркетплейсовЗонаДоставки" id="343">
+													<DataPath>НастройкиДоставкиМаркетплейсов.ЗонаДоставки</DataPath>
+													<EditMode>EnterOnInput</EditMode>
+													<CreateButton>false</CreateButton>
+													<ContextMenu name="НастройкиДоставкиМаркетплейсовЗонаДоставкиКонтекстноеМеню" id="344"/>
+													<ExtendedTooltip name="НастройкиДоставкиМаркетплейсовЗонаДоставкиРасширеннаяПодсказка" id="345"/>
+												</InputField>
+												<InputField name="НастройкиДоставкиМаркетплейсовСпособДоставки" id="337">
+													<DataPath>НастройкиДоставкиМаркетплейсов.СпособДоставки</DataPath>
+													<EditMode>EnterOnInput</EditMode>
+													<CreateButton>false</CreateButton>
+													<ContextMenu name="НастройкиДоставкиМаркетплейсовСпособДоставкиКонтекстноеМеню" id="338"/>
+													<ExtendedTooltip name="НастройкиДоставкиМаркетплейсовСпособДоставкиРасширеннаяПодсказка" id="339"/>
+												</InputField>
+												<InputField name="НастройкиДоставкиМаркетплейсовАдресДоставки" id="340">
+													<DataPath>НастройкиДоставкиМаркетплейсов.АдресДоставки</DataPath>
+													<EditMode>EnterOnInput</EditMode>
+													<CreateButton>false</CreateButton>
+													<ContextMenu name="НастройкиДоставкиМаркетплейсовАдресДоставкиКонтекстноеМеню" id="341"/>
+													<ExtendedTooltip name="НастройкиДоставкиМаркетплейсовАдресДоставкиРасширеннаяПодсказка" id="342"/>
+												</InputField>
+											</ChildItems>
+										</Table>
+									</ChildItems>
+								</Page>
+							</ChildItems>
+						</Pages>
+					</ChildItems>
+				</Page>
+				<Page name="СтраницаПрочее" id="255">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Прочее</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Страница прочее</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="СтраницаПрочееРасширеннаяПодсказка" id="256"/>
+					<ChildItems>
+						<CheckBoxField name="ИспользоватьПодключаемоеОборудование" id="257">
+							<DataPath>ИспользоватьПодключаемоеОборудование</DataPath>
+							<TitleLocation>Right</TitleLocation>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Включает возможность обрабатывать сканирование ШК на закладке "Отгрузка"</v8:content>
+								</v8:item>
+							</ToolTip>
+							<ToolTipRepresentation>Button</ToolTipRepresentation>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ИспользоватьПодключаемоеОборудованиеКонтекстноеМеню" id="258"/>
+							<ExtendedTooltip name="ИспользоватьПодключаемоеОборудованиеРасширеннаяПодсказка" id="259"/>
+						</CheckBoxField>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+		<CheckBoxField name="Отладка" id="237">
+			<DataPath>Объект.Отладка</DataPath>
+			<GroupHorizontalAlign>Right</GroupHorizontalAlign>
+			<CheckBoxType>Auto</CheckBoxType>
+			<ContextMenu name="ОтладкаКонтекстноеМеню" id="238"/>
+			<ExtendedTooltip name="ОтладкаРасширеннаяПодсказка" id="239"/>
+			<Events>
+				<Event name="OnChange">ОтладкаПриИзменении</Event>
+			</Events>
+		</CheckBoxField>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:ExternalDataProcessorObject.КлиентУН_МаркетплейсыИнтеграция</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+		<Attribute name="АдресСервисаИнтеграции" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Адрес</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+			<SavedData>true</SavedData>
+			<FillCheck>ShowError</FillCheck>
+		</Attribute>
+		<Attribute name="ПортСервисаИнтеграции" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Порт</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>5</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="ТаймаутСервисаИнтеграции" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Таймаут</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>3</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+			<SavedData>true</SavedData>
+			<FillCheck>ShowError</FillCheck>
+		</Attribute>
+		<Attribute name="НастройкиОбмена" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настройки обмена</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<SavedData>true</SavedData>
+			<Columns>
+				<Column name="ВерсияAPI" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Версия API</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>2</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Использование" id="5">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Использование</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Описание" id="6">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Описание</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="КлючИд" id="7">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Ключ ид</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>36</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="КлючПредставление" id="8">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Ключ</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>100</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="КомандаОбмена" id="9">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Команда обмена</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>100</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="КомандаОбменаПредставление" id="10">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Команда обмена</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>100</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Ид" id="15">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Ид</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>36</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="ПользовательСервисаИнтеграции" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Пользователь</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+			<SavedData>true</SavedData>
+			<FillCheck>ShowError</FillCheck>
+		</Attribute>
+		<Attribute name="ПарольСервисаИнтеграции" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Пароль</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="КлючиAPI" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Ключи API</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<SavedData>true</SavedData>
+			<Columns>
+				<Column name="Ид" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Ид</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>36</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="КлючAPI" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Ключ API</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>64</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Владелец" id="4">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Владелец</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Описание" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Описание</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="ДоступныеКомандыОбмена" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Доступные команды обмена</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueListType</v8:Type>
+			</Type>
+			<Settings xsi:type="v8:TypeDescription">
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>100</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Settings>
+		</Attribute>
+		<Attribute name="КомандыОбмена" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Команды обмена</v8:content>
+				</v8:item>
+			</Title>
+			<Type/>
+		</Attribute>
+		<Attribute name="ЗащищенноеСоединениеСервисаИнтеграции" id="11">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Защищенное
+соединение</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="СпособыОбмена" id="12">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Способы обмена</v8:content>
+				</v8:item>
+			</Title>
+			<Type/>
+		</Attribute>
+		<Attribute name="ОткрытаИзФайла" id="13">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыта из файла</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="РазмещениеAPIСервисаИнтеграции" id="14">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Размещение API</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+			<FillCheck>ShowError</FillCheck>
+		</Attribute>
+		<Attribute name="НаправленияОбмена" id="15">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Направления обмена</v8:content>
+				</v8:item>
+			</Title>
+			<Type/>
+		</Attribute>
+		<Attribute name="ПараметрыОбмена" id="16">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Параметры обмена</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<SavedData>true</SavedData>
+			<Columns>
+				<Column name="НастройкаИд" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Настройка ид</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>36</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Имя" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Имя</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Значение" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Значение</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>v8:StandardBeginningDate</v8:Type>
+						<v8:Type>v8:StandardPeriod</v8:Type>
+						<v8:Type>v8:ValueListType</v8:Type>
+						<v8:Type>xs:boolean</v8:Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:Type>xs:dateTime</v8:Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:Type>v8:TypeDescription</v8:Type>
+						<v8:Type>dcsset:Filter</v8:Type>
+						<v8:TypeSet>cfg:AnyIBRef</v8:TypeSet>
+						<v8:NumberQualifiers>
+							<v8:Digits>20</v8:Digits>
+							<v8:FractionDigits>4</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+						<v8:StringQualifiers>
+							<v8:Length>250</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+						<v8:DateQualifiers>
+							<v8:DateFractions>DateTime</v8:DateFractions>
+						</v8:DateQualifiers>
+					</Type>
+				</Column>
+				<Column name="ТипЗначения" id="5">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Тип значения</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>v8:TypeDescription</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Описание" id="6">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Описание параметра</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Обязательный" id="4">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Обязательный</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="ВсеПараметрыОбмена" id="17">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Все параметры обмена</v8:content>
+				</v8:item>
+			</Title>
+			<Type/>
+		</Attribute>
+		<Attribute name="Отладка" id="18">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отладка</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="НастройкиМаркетплейсов" id="19">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Маркетплейсы</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<SavedData>true</SavedData>
+			<Columns>
+				<Column name="Контрагент" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Контрагент (маркетплейс)</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Имя" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Имя маркетплейса</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>30</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Использование" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Использование</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Организация" id="4">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Организация</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ШаблонЭтикеткиШтрихкода" id="5">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Этикетка ШК</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ШаблонЭтикеткиМаркетплейса" id="6">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Этикетки маркетплейса</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="КаталогЭтикеток" id="7">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Каталог этикеток</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ТипФайлаЭтикетки" id="8">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Тип файла этикетки</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>5</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="СпособДоставки" id="9">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Способ доставки</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="АдресДоставки" id="10">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Адрес доставки</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>500</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ЗонаДоставки" id="11">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Зона доставки</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ИспользоватьОтправления" id="12">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Использовать отправления</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ИспользоватьПоставки" id="13">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Использовать поставки</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ТестовыйРежим" id="14">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Тестовый режим</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="КомандыОбмена" id="15">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Команды обмена</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>v8:ValueListType</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Склад" id="16">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Склад (маркетплейса)</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="НомерВерсииНастроек" id="20">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Номер версии настроек</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>10</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ИспользоватьПодключаемоеОборудование" id="22">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Использовать подключаемое оборудование</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="НастройкиДоставкиМаркетплейсов" id="21">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Доставки маркетплейсов</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<SavedData>true</SavedData>
+			<Columns>
+				<Column name="Имя" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Имя маркетплейса</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>30</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Использование" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Использование</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Организация" id="4">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Организация</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="СпособДоставки" id="9">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Способ доставки</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="АдресДоставки" id="10">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Адрес доставки</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>500</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ЗонаДоставки" id="11">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Зона доставки</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="СкладДоставки" id="16">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Склад доставки</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<ConditionalAppearance>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>ПараметрыОбменаЗначение</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">ПараметрыОбмена.Значение</dcsset:left>
+						<dcsset:comparisonType>NotFilled</dcsset:comparisonType>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">ПараметрыОбмена.Обязательный</dcsset:left>
+						<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:boolean">true</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ЦветФона</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Color">web:LightSalmon</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+		</ConditionalAppearance>
+	</Attributes>
+	<Commands>
+		<Command name="СохранитьНастройки" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сохранить настройки</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сохранить настройки</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.Write</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>СохранитьНастройки</Action>
+			<Representation>TextPicture</Representation>
+		</Command>
+		<Command name="ВосстановитьНастройки" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Восстановить настройки</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Восстановить настройки</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.OpenFile</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ВосстановитьНастройки</Action>
+			<Representation>TextPicture</Representation>
+		</Command>
+		<Command name="ФормаГлавная" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>На главную</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Форма главная</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОткрытьФормуВТекущемОкне</Action>
+		</Command>
+		<Command name="ФормаНастройкиИнтеграции" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настройки</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Форма настройки интеграции</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОткрытьФормуВТекущемОкне</Action>
+		</Command>
+		<Command name="ВыполнитьКомандуОбмена" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выполнить обмен</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выполнить команду обмена</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ВыполнитьКомандуОбмена</Action>
+			<CurrentRowUse>Use</CurrentRowUse>
+			<AssociatedTableElementId xsi:type="xs:string">НастройкиОбмена</AssociatedTableElementId>
+		</Command>
+		<Command name="ОтладкаКомандыОбменаПоРегламенту" id="11">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отладка команды обмена по регламенту</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отладка команды обмена по регламенту</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОтладкаКомандыОбменаПоРегламенту</Action>
+		</Command>
+	</Commands>
+	<Parameters>
+		<Parameter name="ДополнительнаяОбработкаСсылка">
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+			<KeyParameter>true</KeyParameter>
+		</Parameter>
+	</Parameters>
+</Form>
